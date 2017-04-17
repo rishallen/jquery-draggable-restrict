@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <title>Interaction: Drabbable Restrict</title>
+  <style>
+    #main
+    {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto;
+      border: 2px solid black;
+    }
+    .sub
+    {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 5px;
+      margin: 5px;
+      float: left;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  // helper allows you to move elements without moving original item
+  // clone, copies and allows you to move the copy element, but you can not keep in new position
+  // opacity makes it look more realistic
+    $(document).ready(function() {
+      $("#sub1").draggable({helper: "clone", opacity:.2 });
+      $("#sub2").draggable({});
+      $("#sub3").draggable({helper:function(){
+        return $("div style='border:5px solid purple; background: black; color:white'>Custom Helper</div>");
+      }});
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
+    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+    <div class="sub" id="sub3" style="background: yellow;"></div>
+  </div>
+</body>
+</html>
