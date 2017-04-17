@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Interaction: Drabbable Restrict</title>
+  <style>
+    #main
+    {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto;
+      border: 2px solid black;
+    }
+    .sub
+    {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 5px;
+      margin: 5px;
+      float: left;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  // use array to set up how many pixels it can be moved
+  // option: grid moves items within the x and y axis
+
+    $(document).ready(function() {
+      $("#sub1").draggable({grid:[50, 100]});
+      $("#sub2").draggable({grid:[200, 400]});
+      $("#sub3").draggable({grid: [0, 100]});
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
+    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+    <div class="sub" id="sub3" style="background: yellow;"></div>
+  </div>
+</body>
+</html>

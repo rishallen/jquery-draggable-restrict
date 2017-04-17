@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>Interaction: Drabbable Restrict</title>
+  <style>
+    #main
+    {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto;
+      border: 2px solid black;
+    }
+    .sub
+    {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 5px;
+      margin: 5px;
+      float: left;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  // cursor
+  // you can isolate elements within elements to make items draggable
+    $(document).ready(function() {
+      $("#sub1").draggable({cursor:"grab", cursorAt:{left:5, top:5}, handle:"p"});
+      $("#sub2").draggable({cancel:"p"});
+      $("#sub3").draggable({cursor:"crosshair", cursorAt:{left:5, bottom:5}});
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
+    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+    <div class="sub" id="sub3" style="background: yellow;"></div>
+  </div>
+</body>
+</html>
