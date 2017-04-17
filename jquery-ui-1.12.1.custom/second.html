@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Interaction: Drabbable Restrict</title>
+  <style>
+    #main
+    {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto;
+      border: 2px solid black;
+    }
+    .sub
+    {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 5px;
+      margin: 5px;
+      float: left;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  // cancel can be used to seledt the specific itme that needs to make not draggable
+  // diabled used with the item to make draggable set to true
+    $(document).ready(function() {
+      $("p:first").draggable({disabled:true});
+      $(".sub, p").draggable({cancel:"#sub2, #sub1"});
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div class="sub" id="sub1" style="background: pink;"></div>
+    <div class="sub" id="sub2" style="background: purple;"></div>
+    <div class="sub" id="sub3" style="background: yellow;"></div>
+      <p class="sub">This is a paragraph</p>
+      <p class="sub">This is another paragraph</p>
+  </div>
+</body>
+</html>
