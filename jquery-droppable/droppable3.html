@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Droppable Interaction</title>
+  <style>
+    .item
+    {
+      width: 100px;
+      height: 100px;
+      margin: 5px auto;
+      /*padding: 5px;*/
+      background-color: purple;
+      border: 2px solid black;
+
+    }
+    #area1, #area2
+    {
+      width: 400px;
+      height: 500px;
+      margin: 0px auto;
+      border: 5px solid black;
+    }
+    #main, #area1, #area2
+    {
+      float: left;
+      margin: 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  // Group Items: can control which elements to be accpeted.
+    // need to scope
+    // Purple border should only Accept: purple elements
+      //value of scope option to same as the target element
+    $(document).ready(function() {
+      $("#item1, #item3").draggable({scope: "pink"});
+      $("#item2, #item4").draggable({scope: "purple"});
+      $("#area1").droppable({scope: "purple", drop:function() {
+        alert("a purple item is dropped");}});
+        $("#area2").droppable({scope: "pink", drop:function() {
+          alert("a pink item is dropped");}});
+    });
+  </script>
+</head>
+<body>
+  <!-- draggable elements -->
+  <div id="main">
+    <div id="item1" class="item" style="background: pink;"></div>
+    <div id="item2" class="item" style="background: purple;"></div>
+    <div id="item3" class="item" style="background: pink;"></div>
+    <div id="item4" class="item" style="background: purple;"></div>
+
+  </div>
+  <!-- Target -->
+  <div id="area1" style="border: 5px solid purple"></div>
+  <div id="area2" style="border: 5px solid pink"></div>
+</body>
+</html>

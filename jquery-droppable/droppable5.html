@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Droppable Interaction</title>
+  <style>
+    #item
+    {
+      width: 100px;
+      height: 100px;
+      margin: 5px auto;
+      background-color: pink;
+      border: 2px solid black;
+
+    }
+    #child
+    {
+      width: 200px;
+      height: 200px;
+      margin: 0px auto;
+      border: 5px solid grey;
+    }
+    #parent
+    {
+      width: 400px;
+      height: 400px;
+      margin: 0px auto;
+      border: 5px solid purple;
+    }
+  </style>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    // Option: Greedy: can be used in case of nested droppable elemenets.
+      // Using this option you can decide which element should accept the dropped element.
+    $(document).ready(function() {
+      $("#item").draggable();
+      // $("#child").draggable();
+        $("#parent, #child").droppable({greedy: true, drop:function(){
+          alert("the item is dropped in "+ $(this).attr("id"));}});
+    });
+  </script>
+</head>
+<body>
+  <div id="item"></div>
+  <div id="parent"><div id="child"></div></div>
+
+</body>
+</html>

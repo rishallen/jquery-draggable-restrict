@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Droppable Interaction</title>
+  <style>
+    .item
+    {
+      width: 100px;
+      height: 100px;
+      margin: 0px auto;
+      /*background-color: pink;*/
+      border: 2px solid black;
+    }
+    #area
+    {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto;
+      border: 5px solid black;
+    }
+  </style>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  // Accept: only target the specified element
+  // Group Items: can control which elements to be accpeted.
+    // need to scope
+    $(document).ready(function() {
+      $(".item").draggable();
+      $("#area").droppable({accept: "#item2", drop:function() {
+        alert("the item is dropped");}});
+    })
+  </script>
+</head>
+<body>
+  <!-- draggable elements -->
+  <div id="main">
+    <div id="item1" class="item" style="background: green;"></div>
+    <div id="item2" class="item" style="background: blue;"></div>
+    <div id="item3" class="item" style="background: purple;"></div>
+  </div>
+  <!-- Target -->
+  <div id="area"></div>
+</body>
+</html>
