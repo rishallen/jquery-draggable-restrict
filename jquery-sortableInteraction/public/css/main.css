@@ -1,0 +1,36 @@
+ol {
+  list-style-type: none;
+  width: 170px;
+  height: 480px
+}
+li {
+  height: 30px;
+  width: 150px;
+  border: 1px solid black;
+  margin: 2px;
+  font-size: 20px;
+  text-align: center;
+}
+#fruits li {
+  background-color: pink;
+}
+#vegetables li {
+  background-color: purple;
+}
+fieldset {
+  float: left;
+  margin: 30px;
+  width: 200px;
+  height: 500px;
+  border: 5px solid black;
+}
+.myholder {
+  background: silver;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+img {
+  float: right;
+  padding: 5px;
+}
