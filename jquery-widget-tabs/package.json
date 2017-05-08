@@ -1,0 +1,17 @@
+{
+  "name": "jquery-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.2.1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "risha",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "method-override": "^2.3.8",
+    "nodemon": "^1.11.0"
+  }
+}
