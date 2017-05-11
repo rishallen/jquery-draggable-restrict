@@ -1,0 +1,20 @@
+#bar, #bar2 {
+  margin-bottom: 100px;
+}
+
+.ui-progressbar {
+  background: green;
+  border-radius: 25px;
+}
+
+.ui-progressbar-value {
+  background: red;
+  border-radius: 25px;
+  color: black;
+  font-weight: normal;
+}
+
+#maximum {
+  float: right;
+  margin-right: 15px;
+}
