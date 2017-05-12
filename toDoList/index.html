@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List Application</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="public/js/main.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>To Do List</h2>
+      <button id="btnAddProject">Add Project</button>
+      <div id="projects">
+        <ul id="main">
+          <li><a href="#personal">Personal</a><span class="ui-icon ui-icon-close"></span></li>
+          <li><a href="#work">Work</a><span class="ui-icon ui-icon-close"></span></li>
+        </ul>
+
+        <ol id="personal">
+          <li><input type="checkbox">Doctor Appointment</li>
+          <li><input type="checkbox">Run a mile</li>
+        </ol>
+
+        <ol id="work">
+          <li><input type="checkbox">Meet Director</li>
+          <li><input type="checkbox">Interview for Job</li>
+        </ol>
+      </div>
+      <button id="btnAddTask">Add Task</button>
+      <div id="project-dialog" title="Add a project" style="display:none;">
+        <label for="new-project">Project name:</label><input id="new-project" type="text" />
+      </div>
+      <div id="task-dialog" title="Add a task" style="display:none;">
+        <label for="new-task">Task name:</label><input id="new-task" type="text" />
+      </div>
+
+    </div>
+  </body>
+</html>

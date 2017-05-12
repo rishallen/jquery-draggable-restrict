@@ -1,0 +1,38 @@
+#container {
+  width: 700px;
+  height: 450px;
+  margin: 70px auto;
+  border: 2px solid purple;
+}
+h2 {
+  color: purple;
+  text-align: center;
+}
+#projects {
+  width: 650px;
+  height:250px;
+  margin: 0px auto;
+}
+ol li {
+  border: 1px dotted black;
+  cursor: pointer;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+ol li:hover {
+  background: red;
+}
+
+#btnAddProject {
+  margin-left: 550px;
+  margin-bottom: 20px;
+}
+#btnAddTask {
+  margin-left: 550px;
+  margin-bottom: 20px;
+}
+.ui-icon-close {
+  transform: scale(1.5);
+  cursor: pointer;
+}
