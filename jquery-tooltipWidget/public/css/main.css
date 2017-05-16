@@ -1,0 +1,12 @@
+.ui-tooltip {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ui-tooltip-content {
+  background: green;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+}
