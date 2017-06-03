@@ -25,17 +25,17 @@
   <script>
   // revert: release cursor the element moves back to orginal position
   // set duration of when item should reach origional position
+  // you can set values to valid and invalid, more in teh droppable lecture
     $(document).ready(function() {
-      $("#sub1").draggable({revert: function() {$("#sub1").css("background", "orange");return: true;}});
+      $("#sub1").draggable({revert:function(){$("#sub1").css("background", "purple"); return true}});
       $("#sub2").draggable({revert: true, rateDuration: 100});
     });
   </script>
 </head>
 <body>
   <div id="main">
-    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
-    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
-    <div class="sub" id="sub3" style="background: yellow;"></div>
+    <div class="sub" id="sub1" style="background: pink;"></div>
+    <div class="sub" id="sub2" style="background: purple;"></div>
   </div>
 </body>
 </html>

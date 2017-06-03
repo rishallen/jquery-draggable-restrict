@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pixles</title>
+  <title>Interaction: Restrict Draggability</title>
   <style>
     #main
     {
@@ -24,21 +24,21 @@
   <script src="jquery.js"></script>
   <script src="jquery-ui.js"></script>
   <script>
-  // use array to set up how many pixels you want an item to be moved
-  // name of option: grid moves items within the x and y axis, configured as an array
+  // cancel can be used to select the specific item to not be draggable
+  // disabled is used to set item to draggable
     $(document).ready(function() {
-      $("#sub1").draggable({grid:[50, 100]});
-      $("#sub2").draggable({grid:[200, 400]});
-      $("#sub3").draggable({grid:[0, 100]});
-
+      $("p:first").draggable({disabled:true});
+      $(".sub, p").draggable({cancel:"#sub2, #sub1"});
     });
   </script>
 </head>
 <body>
   <div id="main">
-    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
+    <div class="sub" id="sub1" style="background: pink;"></div>
     <div class="sub" id="sub2" style="background: purple;"></div>
     <div class="sub" id="sub3" style="background: yellow;"></div>
+      <p class="sub">This is a paragraph first</p>
+      <p class="sub">This is another paragraph</p>
   </div>
 </body>
 </html>

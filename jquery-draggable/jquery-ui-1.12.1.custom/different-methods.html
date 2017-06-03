@@ -25,10 +25,13 @@
   <script src="jquery-ui.js"></script>
   <script>
   // 4 methods:
-  // 1. disable
-  // 2. Enable
-  // 3. destroy
-  // 4. option
+  // 1. disable - disable the draggable function temporarily
+  // 2. Enable - enables the function to continue again
+  // 3. destroy - destroys the draggable function
+  // 4. option - used to set or get the values. can be used in 3 ways
+  //    a. set the value
+  //    b. get the value
+  //    c. get the value of all the options
     $(document).ready(function() {
 
       $("#sub1, #sub2").draggable();
@@ -37,24 +40,33 @@
         $("#sub1").draggable("disable");
       });
 
+      //enables the function
       $("#btnEnable").click(function() {
         $("#sub1").draggable("enable");
       });
 
+      //this will disable the draggable function forever
       $("#btnDestroy").click(function() {
         $("#sub1").draggable("destroy");
       });
 
+      //get the value of an option
+      //helper: gets the origional vlaue
       $("#btnGet").click(function() {
         alert($("#sub3").draggable("option", "helper"));
       });
 
+      // if you want to set the value of an option, you need 3 params
+      //1. option name of the function
+      //2. name of the option you want to set value forever
+      //3. the actual value set
       $("#btnSet").click(function() {
         $("#sub1").draggable("option", "cursor", "grab");
       });
 
+      //get value of all options
       $("btnOptions").click(function() {
-        var obj = $("#sub1").draggable("option");
+        var obj = $("#sub3").draggable("option");
           alert(obj.revert);
           alert(obj.revertDuration);
         });

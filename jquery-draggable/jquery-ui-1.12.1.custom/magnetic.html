@@ -3,12 +3,13 @@
 <head>
   <title>Interaction: Drabbable Restrict</title>
   <style>
-    #main
+    #main1
     {
       width: 300px;
       height: 300px;
       margin: 0px auto;
       border: 2px solid black;
+      float: left;
     }
     #main2
     {
@@ -32,18 +33,23 @@
   <script src="jquery-ui.js"></script>
 
   <script>
-  //snap value is false by deafult, if you want it to be on set to true
+  //snap value is false by deafult, set snap to true
+  // you can set set snap to element and it will be magnetic to that element
+  // add maganetic effect using three options
+  // snap
+  // snapTolerance
+  // snapMode (inner, outer)
     $(document).ready(function() {
-      $("#sub1").draggable({snap:#main, snapTolerance: 20});
+      $("#sub1").draggable({snap:"#main1", snapTolerance: 20}); //snaps to what it is next
       $("#sub2, #sub3, #main2").draggable({snap: true});
-      $("#sub3").draggable({})
+      $("#sub2").draggable({snap:true, snapMode: "outer"}) //snaps to outer sides of the items and goes over and under
     });
   </script>
 </head>
 <body>
-  <div id="main">
-    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
-    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+  <div id="main1">
+    <div class="sub" id="sub1" style="background: pink;"></div>
+    <div class="sub" id="sub2" style="background: purple;"></div>
     <div class="sub" id="sub3" style="background: yellow;"></div>
   </div>
   <div id="main2">

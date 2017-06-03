@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interaction: Drabbable Restrict</title>
+  <title>Interaction: Helper</title>
   <style>
     #main
     {
@@ -24,23 +24,28 @@
   <script src="jquery.js"></script>
   <script src="jquery-ui.js"></script>
   <script>
-  // helper allows you to move elements without moving original item
+  // option: Helper allows you to move elements without moving original item
+  // The default is the origional item
+  // need to spicify the option
   // clone, copies and allows you to move the copy element, but you can not keep in new position
   // opacity makes it look more realistic
     $(document).ready(function() {
       $("#sub1").draggable({helper: "clone", opacity:.2 });
-      $("#sub2").draggable({});
+      $("#sub2").draggable({revert:true}); //revert true, sets the item to move back to origional position
+      $("#sub4").draggable(); //this box stays where you leave it, no helper
       $("#sub3").draggable({helper:function(){
-        return $("div style='border:5px solid purple; background: black; color:white'>Custom Helper</div>");
-      }});
+        return $("<div style='border:2px solid black; background:black;color:white'>Custom helper</div>");
+      }})
     });
   </script>
 </head>
 <body>
   <div id="main">
-    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
-    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+    <div class="sub" id="sub1" style="background: pink;"></div>
+    <div class="sub" id="sub2" style="background: purple;"></div>
     <div class="sub" id="sub3" style="background: yellow;"></div>
+    <div class="sub" id="sub4" style="background: black;"></div>
+
   </div>
 </body>
 </html>

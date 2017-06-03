@@ -24,19 +24,21 @@
   <script src="jquery.js"></script>
   <script src="jquery-ui.js"></script>
   <script>
-  // cursor
-  // you can isolate elements within elements to make items draggable
+  // axis (x and y) and containment are used for movement
+  // 2 ways to move elements
+    // 1. axis is used to set the direction of movment
+    // 2. containment: set the boundary of movement
     $(document).ready(function() {
-      $("#sub1").draggable({cursor:"grab", cursorAt:{left:5, top:5}, handle:"p"});
-      $("#sub2").draggable({cancel:"p"});
-      $("#sub3").draggable({cursor:"crosshair", cursorAt:{left:5, bottom:5}});
+      $("#sub1").draggable({axis:"x"});
+      $("#sub2").draggable({axis:"y"});
+      $("#sub3").draggable({containment:"#main"}); //contained within the #main css container
     });
   </script>
 </head>
 <body>
   <div id="main">
-    <div class="sub" id="sub1" style="background: pink;"><p>Click here to move</p></div>
-    <div class="sub" id="sub2" style="background: purple;"><p>Not draggable if you click here</div>
+    <div class="sub" id="sub1" style="background: pink;"></div>
+    <div class="sub" id="sub2" style="background: purple;"></div>
     <div class="sub" id="sub3" style="background: yellow;"></div>
   </div>
 </body>
