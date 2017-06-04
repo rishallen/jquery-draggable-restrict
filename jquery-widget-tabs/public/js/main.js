@@ -2,20 +2,20 @@
 // $(document).ready(function() {
 //   $("#details").tabs();
 // })
-//need to have an unordered list to link to the contents
+//need to have an unordered/ordered list to link to the contents
 
 // //2. External Content
 // $(document).ready(function() {
 //   $("#details").tabs();
 // })
-// tabs can fetch external data in other file and display in different panels
+// tabs can fetch external data in other files and display in different panels
 // make sure to specify the links to the other files
 
 // //3. Animate Hiding and Showing of Panels
 // $(document).ready(function() {
-//   // $("#details").tabs({hide:3000, show:6000});
-//   $("#details").tabs({hide:{duration:3000, duration:5000, easing: "easeInOutBounce", effect:"explode", delay:3000}
-//                     ,show:{duration:3000, easing:"easeOutBounce", effect:"highlight"}});
+//   $("#details").tabs({hide:3000, show:6000});
+//   // $("#details").tabs({hide:{duration:3000, duration:5000, easing: "easeInOutBounce", effect:"explode", delay:3000}
+//                     // ,show:{duration:3000, easing:"easeOutBounce", effect:"highlight"}});
 //
 // })
 // Hide and Show:
@@ -30,9 +30,9 @@
 
 // //4. Miscellaneous Options
 // $(document).ready(function() {
-  // $("#details").tabs({active:false, collapsible:true});
-  // $("#details").tabs({event:"mouseover"});
-  // $("#details").tabs({heightStyle:"auto"});
+//   $("#details").tabs({active:false, collapsible:true});
+//   $("#details").tabs({event:"mouseover"});
+//   $("#details").tabs({heightStyle:"auto"});
 // })
 //tabs wdiget:
 // a. active - which panel should be displayed when page is loaded [0] index
