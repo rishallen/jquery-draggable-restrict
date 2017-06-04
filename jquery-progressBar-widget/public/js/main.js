@@ -2,7 +2,7 @@
 // $(document).ready(function() {
 //   $("#bar").progressbar({value:10, max:50});
 //   $("#bar2").progressbar({value:false})
-  // alert($("#bar").progressbar("option", "max"));
+//   // alert($("#bar").progressbar("option", "max"));
 // })
 // max - set max value
 // false
@@ -10,10 +10,10 @@
 // //3. Customize the progressbar
 // $(document).ready(function() {
 //   $("#bar").progressbar({value:20, max:50});
-//   var maximum = $("#bar").progressbar("option", "max");
-//   $("maximum").text(maximum + "%");
-//   var current = $("#bar").progressbar("option", "value");
-//   $("ui-progressbar-value").text(current + "%");
+//     var maximum = $("#bar").progressbar("option", "max");
+//   $("#maximum").text(maximum + "%");
+//     var current = $("#bar").progressbar("option", "value");
+//   $(".ui-progressbar-value").text(current + "%");
 //
 // });
 
@@ -22,9 +22,9 @@ $(document).ready(function() {
   var newValue;
   $("#bar").progressbar({value:20, max:50});
   var maximum = $("#bar").progressbar("option", "max");
-  $("maximum").text(maximum + "%");
+  $("#maximum").text(maximum + "%");
    current = $("#bar").progressbar("option", "value");
-  $("ui-progressbar-value").text(current + "%");
+  $(".ui-progressbar-value").text(current + "%");
   $("button").click(function() {
     var current = $("#bar").progressbar("option", "value");
     var id = $(this).attr("id");

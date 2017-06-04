@@ -3,15 +3,16 @@
 }
 
 .ui-progressbar {
-  background: green;
+  background: blue;
   border-radius: 25px;
 }
 
 .ui-progressbar-value {
-  background: red;
+  background: orange;
   border-radius: 25px;
   color: black;
   font-weight: normal;
+  text-align: right;
 }
 
 #maximum {
