@@ -20,7 +20,10 @@
   margin: 50px;
 }
 
-
+.customer-helper {
+  background: grey;
+  border: 1px solid black;
+}
 #main {
   width: 800px;
   height: 400px;

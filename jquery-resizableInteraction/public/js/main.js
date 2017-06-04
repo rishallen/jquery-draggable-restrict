@@ -1,7 +1,6 @@
 // //1. Resizable Intro
 // $(document).ready(function() {
 //   $("img, div").resizable(); //makes the elements resizable
-//
 // })
 
 // //2. DragToResize
@@ -49,10 +48,10 @@
 // //5. Ghost Helper
 // $(document).ready(function() {
 //   $("#box").resizable({ghost: true}); // do not resize beyond #main boundaries (parent element)
-//   $("#box2").resizable({ghost: true, helper: "customer-helper"});
+//   $("#box2").resizable({ghost:true, helper: "customer-helper"});
 // })
 //a. Ghost: set value to true, see original size
-//b. Helper:
+//b. Helper: set a class name as the helper in css, this will allow you to customize the helper
 
 // // 6. Aspect Ratio
 // $(document).ready(function() {
@@ -68,12 +67,12 @@
 // })
 
 
-// // 8. Options Already discussed
+// // 8. Options Already discussed(code snippets)
 // $(document).ready(function() {
-//   $("#box").resizable({ghost: true});
-  // $("#box2").resizable({"option": "delay", 500}); // canceled the box element
-  // $("#box2").resizable("option", "disabled", true});
-  // $("#box").resizable("option", "grid", [20,50]); // move 20 pixels in the x direction and 50 pixels in the y direction, it will resize to the specified the pixels
+//   $("#box4").resizable({ghost: true});
+//   // $("#box4").resizable("option", "delay", 500); // canceled the box element
+//   // $("#box4").resizable("option", "disabled", true);
+//   $("#box4").resizable("option", "grid", [20,50]); // move 20 pixels in the x direction and 50 pixels in the y direction, it will resize to the specified the pixels
 // })
 //a. Cancel: specify for which all elements needed to cancel the reziablility
 // and b. Disable: use to particular item for which we need to cancel the functionality
@@ -82,23 +81,23 @@
 // and e. Delay
 
 // // 9. Manage Events
-$(document).ready(function() {
-  $("box").resizable({create: function() {
-    $("#status").text("Resizable created!!")
-  },
-  start:function() {
-    $(this).css("background", "blue")
-
-  },
-  resize:function() {
-    $("#status").text("Getting resized!!")
-
-  },
-  stop:function() {
-    $("#status").text("Resizable stopped!!")
-  },
-  });
-})
+// $(document).ready(function() {
+//   $(".box").resizable({create: function() {
+//     $("#status").text("Resizable created!!")
+//   },
+//   start:function() {
+//     $(this).css("background", "blue")
+//
+//   },
+//   resize:function() {
+//     $("#status").text("Getting resized!!")
+//
+//   },
+//   stop:function() {
+//     $("#status").text("Resizable stopped!!")
+//   },
+//   });
+// })
 //triggered Events
 //a. Create: triggered when we create a resizable
 //b. Start: triggered when start resizing
