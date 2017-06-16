@@ -1,0 +1,29 @@
+#container {
+  width: 500px;
+  height: 450px;
+  border: 2px solid purple;
+  margin: 50px auto;
+}
+
+h2 {
+  color: purple;
+  text-align: center;
+}
+iframe {
+  margin-left: 90px;
+}
+.slider {
+  color: purple;
+  border: none;
+  position: relative;
+  left: 41px;
+  top: 25px;
+  border: none;
+
+}
+#speedSlider .ui-slider-handle {
+  background-color: red;
+  bottom: 2px;
+  width: 24px;
+  height: 26px;
+}
